@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Churn Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto mt-10">
+      <div class="flex justify-center">
+        <div
+          class="card bg-white p-10 rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2"
+        >
+          <h2 class="text-2xl font-bold text-center mb-6">Churn Prediction</h2>
+          <form action="http://localhost:5000/" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query1" class="block text-gray-700"
+                  >SeniorCitizen:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query1"
+                  name="query1"
+                  value="{{ query1 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query2" class="block text-gray-700"
+                  >MonthlyCharges:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query2"
+                  name="query2"
+                  value="{{ query2 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query3" class="block text-gray-700"
+                  >TotalCharges:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query3"
+                  name="query3"
+                  value="{{ query3 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query4" class="block text-gray-700">Gender:</label>
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query4"
+                  name="query4"
+                  value="{{ query4 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query5" class="block text-gray-700">Partner:</label>
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query5"
+                  name="query5"
+                  value="{{ query5 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query6" class="block text-gray-700"
+                  >Dependents:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query6"
+                  name="query6"
+                  value="{{ query6 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query7" class="block text-gray-700"
+                  >PhoneService:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query7"
+                  name="query7"
+                  value="{{ query7 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query8" class="block text-gray-700"
+                  >MultipleLines:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query8"
+                  name="query8"
+                  value="{{ query8 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query9" class="block text-gray-700"
+                  >InternetService:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query9"
+                  name="query9"
+                  value="{{ query9 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query10" class="block text-gray-700"
+                  >OnlineSecurity:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query10"
+                  name="query10"
+                  value="{{ query10 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query11" class="block text-gray-700"
+                  >OnlineBackup:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query11"
+                  name="query11"
+                  value="{{ query11 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query12" class="block text-gray-700"
+                  >DeviceProtection:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query12"
+                  name="query12"
+                  value="{{ query12 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query13" class="block text-gray-700"
+                  >TechSupport:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query13"
+                  name="query13"
+                  value="{{ query13 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query14" class="block text-gray-700"
+                  >StreamingTV:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query14"
+                  name="query14"
+                  value="{{ query14 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query15" class="block text-gray-700"
+                  >StreamingMovies:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query15"
+                  name="query15"
+                  value="{{ query15 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query16" class="block text-gray-700"
+                  >Contract:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query16"
+                  name="query16"
+                  value="{{ query16 }}"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="input-group">
+                <label for="query17" class="block text-gray-700"
+                  >PaperlessBilling:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query17"
+                  name="query17"
+                  value="{{ query17 }}"
+                />
+              </div>
+              <div class="input-group">
+                <label for="query18" class="block text-gray-700"
+                  >PaymentMethod:</label
+                >
+                <input
+                  type="text"
+                  class="form-control mt-1 p-2 border rounded"
+                  id="query18"
+                  name="query18"
+                  value="{{ query18 }}"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="query19" class="block text-gray-700">Tenure:</label>
+              <input
+                type="text"
+                class="form-control mt-1 p-2 border rounded"
+                id="query19"
+                name="query19"
+                value="{{ query19 }}"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Submit
+            </button>
+          </form>
+          <div class="result-text mt-6">
+            <div class="result text-xl font-semibold">{{ output1 }}</div>
+            <div class="result text-xl font-semibold">{{ output2 }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
