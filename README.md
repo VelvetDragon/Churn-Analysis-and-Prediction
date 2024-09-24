@@ -136,7 +136,7 @@ A Flask app (`app.py`) is created to serve the model as a web application. The a
 - Predicts the likelihood of churn based on the trained model.
 - Displays the prediction with confidence levels.
 
-### Graphs
+### Flask App
 
 - Example of Prediction Results:
   ![Prediction Results](screenshots/flaskapp.png)
